@@ -6,7 +6,7 @@ permissions:
 jobs:
   whoami:
     runs-on: ubuntu-latest
-    env: prod
+    environment: prod
     steps:
       - uses: azure/login@v2
         with:
