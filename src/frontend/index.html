@@ -1,9 +1,75 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jasper Arts - Homepage</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <p>Some text.</p>
+
+    <div class="sky">
+      <div class="firework f1"></div>
+      <div class="firework f2"></div>
+      <div class="firework f3"></div>
+      <center>
+        <h1>~*~ Welcome to my Homepage! ~*~</h1>
+        <p class="blink">*** UNDER CONSTRUCTION ***</p>
+      </center>
+    </div>
+
+    <marquee behavior="scroll" direction="left" scrollamount="4">
+      Cloud Resume Challenge in progress... Azure * DevOps * GitHub Actions * AZ-900 * AZ-104 * AZ-400 coming soon!
+    </marquee>
+
+    <hr>
+
+    <center>
+      <table border="1" cellpadding="8" cellspacing="0" width="90%">
+        <tr>
+          <td width="25%" valign="top">
+            <b>Menu</b>
+            <ul>
+              <li><a href="#about">About me</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#certs">Certifications</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </td>
+          <td valign="top">
+            <h2 id="about">About me</h2>
+            <p>Hi! I'm Jasper. I build things in the cloud and I am learning DevOps the hard way: by doing it. 😎</p>
+
+            <h2 id="experience">Experience</h2>
+            <ul>
+              <li>Fox-IT: Security Consultant</li>
+              <li>UWV: Security Engineer</li>
+              <li>CloudChamps: Cloud Engineer</li>
+              <li>Assignment at De Nederlandsche Bank: Security Engineer</li>
+            </ul>
+
+            <h2 id="certs">Certifications</h2>
+            <ul>
+              <li>Professional Network Penetration Tester (PNPT)</li>
+              <li>Microsoft Azure Fundamentals (AZ-900)</li>
+              <li>Microsoft Azure Administrator (AZ-104)</li>
+              <li>AZ-400: in progress</li>
+            </ul>
+
+            <h2 id="contact">Contact</h2>
+            <p>E-mail: add a contact address here</p>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <hr>
+
+    <center>
+      <p class="counter">You are visitor number: <span id="visitors">-</span></p>
+      <p><small>Best viewed in Netscape Navigator 4.0 at 800x600</small></p>
+    </center>
+
+    <script src="counter.js"></script>
   </body>
 </html>
