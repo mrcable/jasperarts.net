@@ -21,4 +21,3 @@ jobs:
         run: |
           az storage blob upload-batch --account-name ${{ vars.STORAGE_ACCOUNT }} \
             -s src/frontend -d '$web' --overwrite --auth-mode login
-            # Cloudflare-cache legen: zie Stap 3 (curl naar purge_cache met secret CF_API_TOKEN)
