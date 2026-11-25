@@ -21,3 +21,12 @@ jobs:
         run: |
           az storage blob upload-batch --account-name ${{ vars.STORAGE_ACCOUNT }} \
             -s src/frontend -d '$web' --overwrite --auth-mode login
+      - name: Purge Cloudflare cache
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ vars.CF_ZONE_ID }}
+        run: |
+          curl -fsS -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}'
