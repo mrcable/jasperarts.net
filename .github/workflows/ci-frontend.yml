@@ -1,12 +1,18 @@
 name: ci-frontend
 on:
   pull_request:
-    paths: [src/frontend/**]
 permissions:
   contents: read
 jobs:
   frontend-ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: npx --yes htmlhint "src/frontend/*.html"
+      - uses: actions/checkout@v7
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            frontend:
+              - 'src/frontend/**'
+      - if: steps.changes.outputs.frontend == 'true'
+        run: npx --yes htmlhint "src/frontend/*.html"
